@@ -10,6 +10,13 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          title: 'Alternative Text',
+          name: 'alt',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'buttonText',

@@ -6,15 +6,26 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'array',
-      of: [{ type: 'image' }],
+      type: 'image',
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          title: 'Alternative Text',
+          name: 'alt',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'name',
       title: 'Name',
+      type: 'string',
+    },
+    {
+      name: 'item_number',
+      title: 'Item Number',
       type: 'string',
     },
     {
@@ -30,6 +41,14 @@ export default {
       name: 'price',
       title: 'Price',
       type: 'number',
+      options: {
+        decimalScale: 2,
+        fixedDecimalScale: true,
+        allowNegative: false,
+        decimalSeparator: ',',
+        thousandSeparator: '.',
+        prefix: '€ ',
+      },
     },
     {
       name: 'details',
@@ -37,10 +56,21 @@ export default {
       type: 'string',
     },
     {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: { type: 'category' },
+      name: 'allergens',
+      title: 'Allergens',
+      type: 'string',
     },
+    {
+      name: 'amount',
+      title: 'Amount',
+      type: 'number',
+    },
+
+    // {
+    //   name: 'category',
+    //   title: 'Category',
+    //   type: 'reference',
+    //   to: { type: 'category' },
+    // },
   ],
 };

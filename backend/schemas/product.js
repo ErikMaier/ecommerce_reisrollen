@@ -6,15 +6,20 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
+      type: 'array',
+      of: [
         {
-          title: 'Alternative Text',
-          name: 'alt',
-          type: 'string',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+            },
+          ],
         },
       ],
     },
